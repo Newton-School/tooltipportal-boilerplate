@@ -1,10 +1,12 @@
+// import '../styles/globals.css';
 "use client"
-// import "@/styles/globals.css";
-
-export default function App({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   return (
-
-        <Component {...pageProps} />
-
-);
+    <>
+      <Component {...pageProps} />
+      <div id="tooltip-portal"></div>
+    </>
+  );
 }
+
+export default MyApp;

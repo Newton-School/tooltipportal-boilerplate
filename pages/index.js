@@ -1,20 +1,13 @@
 import { useState } from 'react';
-import Modal from '../components/Modal';
+import DynamicTooltip from '../components/DynamicTooltip';
 
-const HomePage = () => {
-  const [isModalOpen, setModalOpen] = useState(false);
+export default function Home() {
+  const [showTooltip, setShowTooltip] = useState(false);
 
   return (
     <div>
-      <button onClick={() => setModalOpen(true)}>Open Modal</button>
-
-      <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
-        <h2>This is a Modal</h2>
-        <p>Using React Portals with Next.js</p>
-        <button onClick={() => setModalOpen(false)}>Close Modal</button>
-      </Modal>
+     <span onMouseEnter={() => setShowTooltip(true)} onMouseLeave={() => setShowTooltip(false)}>Hover over this text to see the dynamic tooltip.</span>
+      {showTooltip && <DynamicTooltip />}
     </div>
   );
-};
-
-export default HomePage;
+}
