@@ -6,7 +6,7 @@ export default function Home() {
 
   return (
     <div>
-     <span onMouseEnter={() => setShowTooltip(true)} onMouseLeave={() => setShowTooltip(false)}>Hover over this text to see the dynamic tooltip.</span>
+     <span >Hover over this text to see the dynamic tooltip.</span>
       {showTooltip && <DynamicTooltip />}
     </div>
   );
