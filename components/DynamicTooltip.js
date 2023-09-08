@@ -4,10 +4,7 @@ import TooltipPortal from './TooltipPortal';
 function DynamicTooltip() {
 
 
-  useEffect(() => {
-
-
-  }, []);
+ 
 
   return (
     <TooltipPortal>
